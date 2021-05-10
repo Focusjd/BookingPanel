@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class Reservation {
+class Reservation {
     private String firstName;
     private String lastName;
     private Date startDate;
