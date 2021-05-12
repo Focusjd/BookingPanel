@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class BookingPanel extends JFrame{
     private JPanel mainPanel;
@@ -6,25 +7,57 @@ public class BookingPanel extends JFrame{
     private JTextPane titleText;
     private JPanel selectionPanel;
 
-    public BookingPanel(String title){
+    public BookingPanel(String title, int w, int h, int x, int y){
         super(title);
 
+//        this.setContentPane(mainPanel);
+        this.setBackground(Color.PINK);
+        initComponent();
+
+        this.setSize(w,h);
+        this.setLocation(x,y);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(mainPanel);
-        this.pack();
+//        this.pack(); //this will change the frame size according to the current frame component
+        this.setVisible(true);
+
     }
 
-    public void setMapImg(){
+    private void initComponent(){
+        this.setLayout(new BorderLayout());
+        mapPanel = new JPanel();
+        selectionPanel = new JPanel();
+
+        mapPanel.setBackground(Color.pink);
+        mapPanel.add(setImg("src/map.png"));
+
+        selectionPanel.setLayout(new BoxLayout(selectionPanel, BoxLayout.PAGE_AXIS));
+        selectionPanel.add(setTitleText("Focusing Hotel Booking System"));
+
+
+        this.add(mapPanel, BorderLayout.WEST);
+        this.add(selectionPanel, BorderLayout.EAST);
+//        this.add(new JButton("center"), BorderLayout.CENTER);
+
+    }
+
+    private JTextPane setTitleText(String titleName){
+        JTextPane text = new JTextPane();
+        text.setText(titleName);
+
+        return text;
+    }
+
+    private JLabel setImg(String imgLocation){
         JLabel label = new JLabel();
-        ImageIcon img = new ImageIcon("map.png");// 创建图片对象
+        ImageIcon img = new ImageIcon(imgLocation);
         label.setIcon(img);
-        mapPanel.add(label);
-//        add(mapPanel);
+//        label.setBounds(0,0,img.getIconWidth(),img.getIconHeight());
+//        mainPanel = new JPanel();
+//        mainPanel.setLayout();
+        return label;
     }
 
     public static void main(String[] args) {
-        BookingPanel frame = new BookingPanel("test");
-        frame.setVisible(true);
-        frame.setMapImg();
+        BookingPanel frame = new BookingPanel("test window", 800, 600, 300, 300);
     }
 }
