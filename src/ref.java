@@ -30,6 +30,7 @@ public class ref extends JFrame{
     private JTextField checkOutDate;
     private JPanel checkInPanel;
     private JPanel checkOutPanel;
+    private JPanel scrolBackground;
 
     private final static String newline = "\n";
 
@@ -61,7 +62,7 @@ public class ref extends JFrame{
         this.setContentPane(mainPanel);
 //        textArea2.append("testtest"+newline+"dsfavvvdsafasfd;slajfsdjaf;lkjs;lfjl;asjffasfaf");
 //        changeText();
-        setimage();
+        setimage(img1,"src/hotelImage/img1.png");
         setmap();
         setPeopleBox1();
 
@@ -89,10 +90,10 @@ public class ref extends JFrame{
         mapLabel.setIcon(locationMap);
     }
 
-    public void setimage(){
-        ImageIcon locationMap=new ImageIcon("src/hotelImage/img1.png");
+    public void setimage(JLabel label,String path){
+        ImageIcon locationMap=new ImageIcon(path);
         locationMap.setImage(locationMap.getImage().getScaledInstance(150, 100, Image.SCALE_DEFAULT));
-        img1.setIcon(locationMap);
+        label.setIcon(locationMap);
     }
     public void setDataChooser(JTextField textField1, JPanel panel){
         DateChooser dateChooser1 = DateChooser.getInstance("yyyy-MM-dd");
