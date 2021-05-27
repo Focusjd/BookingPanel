@@ -2,6 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class ref extends JFrame{
     private JPanel BookingPanel;
@@ -16,7 +20,7 @@ public class ref extends JFrame{
     private JTextField firstNametext;
     private JTextField lastnametext;
     private JTextField phonetext;
-    private JButton button1;
+    private JButton h1b;
     private JLabel img1;
     private JTextArea orderPreviewer;
     private JButton confirmButton;
@@ -36,20 +40,35 @@ public class ref extends JFrame{
     private JLabel img8;
     private JLabel img9;
     private JLabel img10;
-    private JSpinner spinner1;
-    private JSpinner spinner2;
-    private JSpinner spinner3;
-    private JSpinner spinner4;
-    private JSpinner spinner5;
+    private JSpinner room2;
+    private JSpinner room3;
+    private JSpinner room4;
+    private JSpinner room1;
     private JSpinner personNumber;
     private JPanel inp;
     private JPanel test2;
     private JButton reviewButton;
+    private JLabel hotelLocation;
+    private JButton h2t;
+    private JButton h3t;
+    private JButton h4t;
+    private JButton h5t;
+    private JButton h6t;
+    private JButton h7t;
+    private JButton h8t;
+    private JButton h9t;
+    private JButton h10t;
 
     private String firstName;
     private String lastName;
     private int phone;
     private int pNum;
+    private Date checkin;
+    private Date checkout;
+    private int room1Num;
+    private int room2Num;
+    private int room3Num;
+    private int room4Num;
 
 
     private final static String newline = "\n";
@@ -115,6 +134,12 @@ public class ref extends JFrame{
                 phonetext.setText("");
                 personNumber.setValue(0);
                 orderPreviewer.setText("");
+                checkInDate.setText("");
+                checkOutDate.setText("");
+                room1.setValue(0);
+                room2.setValue(0);
+                room3.setValue(0);
+                room4.setValue(0);
             }
         });
         reviewButton.addActionListener(new ActionListener() {
@@ -127,6 +152,15 @@ public class ref extends JFrame{
     }
     public void inputChecker(){
         loadData();
+        try {
+            if (checkin.compareTo(checkout)>0){
+                JOptionPane.showMessageDialog(null,"Check-in date should before check-out date");
+                return;
+            }
+        }catch (Exception e){
+
+        }
+
         if (phone==0||firstName==null||lastName==null||pNum<=0){
             JOptionPane.showMessageDialog(null,"Invalid Input!");
             return;
@@ -140,6 +174,14 @@ public class ref extends JFrame{
             firstName = firstNametext.getText();
             lastName = lastnametext.getText();
             pNum = (int)personNumber.getValue();
+            DateFormat format = new SimpleDateFormat("yyyy-MM-d", Locale.ENGLISH);
+            checkin = format.parse(checkInDate.getText());
+            checkout = format.parse(checkOutDate.getText());
+            room1Num = (int)room1.getValue();
+            room2Num = (int)room2.getValue();
+            room3Num = (int)room3.getValue();
+            room4Num = (int)room4.getValue();
+
         }catch (Exception e){
             pNum=0;
         }
@@ -176,14 +218,31 @@ public class ref extends JFrame{
 
     public void orderPreview(){
         orderPreviewer.setText("");
+        long from1 = checkout.getTime();
+        long to1 = checkin.getTime();
+        int days = (int) ((from1-to1) / (1000 * 60 * 60 * 24));
+
         String msg =
                 "Order Preview"+newline
                 +"Full Name: "+firstName+" "+lastName+newline
                 +"Phone: "+phone+newline
                 +"Customer Number: "+ pNum+newline
+                +"total day:"+days+newline
                 +"Check-in Date"+checkInDate.getText()+newline
-                +"Check-out Date"+checkOutDate.getText();
+                +"Check-out Date"+checkOutDate.getText()+newline;
         orderPreviewer.append(msg);
+        if (room1Num>0){
+            orderPreviewer.append("Single One Bed Room: "+ room1Num+newline);
+        }
+        if (room2Num>0){
+            orderPreviewer.append("Double One Bed Room: "+ room1Num+newline);
+        }
+        if (room3Num>0){
+            orderPreviewer.append("Double Two Bed Room: "+ room1Num+newline);
+        }
+        if (room4Num>0){
+            orderPreviewer.append("Family Four Bed Room: "+ room1Num+newline);
+        }
     }
 
     private void createUIComponents() {
