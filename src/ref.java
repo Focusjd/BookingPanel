@@ -8,13 +8,22 @@ public class ref extends JFrame{
     private JScrollPane Hotels;
     private JLabel selectHotelName;
     private JLabel hotelLabel;
-    private JTextArea aaaaaaaaaTextArea;
     private JScrollPane reservation;
     private JTextArea textArea2;
     private JScrollPane customerChecker;
     private JLabel mapLabel;
     private JButton button1;
     private JTextArea textArea1;
+    private JPanel titlePanel;
+    private JPanel row1;
+    private JPanel row2;
+    private JPanel row3;
+    private JPanel row4;
+    private JPanel row5;
+    private JLabel selectTitle;
+    private JTextField textField1;
+    private JTextField textField2;
+    private JTextField textField3;
 
     private final static String newline = "\n";
 
