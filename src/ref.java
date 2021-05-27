@@ -31,6 +31,15 @@ public class ref extends JFrame{
     private JPanel checkInPanel;
     private JPanel checkOutPanel;
     private JPanel scrolBackground;
+    private JLabel img2;
+    private JLabel img3;
+    private JLabel img4;
+    private JLabel img5;
+    private JLabel img6;
+    private JLabel img7;
+    private JLabel img8;
+    private JLabel img9;
+    private JLabel img10;
 
     private final static String newline = "\n";
 
@@ -63,6 +72,15 @@ public class ref extends JFrame{
 //        textArea2.append("testtest"+newline+"dsfavvvdsafasfd;slajfsdjaf;lkjs;lfjl;asjffasfaf");
 //        changeText();
         setimage(img1,"src/hotelImage/img1.png");
+        setimage(img2,"src/hotelImage/img1.png");
+        setimage(img3,"src/hotelImage/img1.png");
+        setimage(img4,"src/hotelImage/img1.png");
+        setimage(img5,"src/hotelImage/img1.png");
+        setimage(img6,"src/hotelImage/img1.png");
+        setimage(img7,"src/hotelImage/img1.png");
+        setimage(img8,"src/hotelImage/img1.png");
+        setimage(img9,"src/hotelImage/img1.png");
+        setimage(img10,"src/hotelImage/img1.png");
         setmap();
         setPeopleBox1();
 
