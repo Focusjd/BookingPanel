@@ -69,6 +69,8 @@ public class ref extends JFrame{
     private int room2Num;
     private int room3Num;
     private int room4Num;
+    private String currentHotel;
+    private String currentAddr;
 
 
     private final static String newline = "\n";
@@ -129,17 +131,8 @@ public class ref extends JFrame{
         resetButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstNametext.setText("");
-                lastnametext.setText("");
-                phonetext.setText("");
-                personNumber.setValue(0);
-                orderPreviewer.setText("");
-                checkInDate.setText("");
-                checkOutDate.setText("");
-                room1.setValue(0);
-                room2.setValue(0);
-                room3.setValue(0);
-                room4.setValue(0);
+                reset();
+                resetDate();
             }
         });
         reviewButton.addActionListener(new ActionListener() {
@@ -149,14 +142,125 @@ public class ref extends JFrame{
                 orderPreview();
             }
         });
+        h1b.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                reset();
+                currentHotel = "Royal hotel";
+                currentAddr = "Soccer Rd No.111";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h2t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "NOLITA Hotel";
+                currentAddr = "Laight St No.6";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h3t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Goat Hotel";
+                currentAddr = "Goat St No.1";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h4t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "ROMA Hotel";
+                currentAddr = "Sleep St No.7";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h5t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Beans Hotel";
+                currentAddr = "Net Rd No.12";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h6t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Big Hotel";
+                currentAddr = "Huge St No.55";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h7t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Small Hotel";
+                currentAddr = "Small Rd No.31";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h8t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Cheng Hotel";
+                currentAddr = "Small Rd No.24";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h9t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Focus Hotel";
+                currentAddr = "Charlie St No.1";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+        h10t.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                currentHotel = "Last Hotel";
+                currentAddr = "First Rd No.212";
+                hotelLabel.setText(currentHotel);
+                hotelLocation.setText(currentAddr);
+            }
+        });
+    }
+    public void reset(){
+        firstNametext.setText("");
+        lastnametext.setText("");
+        phonetext.setText("");
+        personNumber.setValue(0);
+        orderPreviewer.setText("");
+        room1.setValue(0);
+        room2.setValue(0);
+        room3.setValue(0);
+        room4.setValue(0);
+    }
+    public void resetDate(){
+        checkInDate.setText("");
+        checkOutDate.setText("");
     }
     public void inputChecker(){
         loadData();
         try {
+            if (currentHotel==null){
+                JOptionPane.showMessageDialog(null,"Please select a hotel");
+                return;
+            }
             if (checkin.compareTo(checkout)>0){
                 JOptionPane.showMessageDialog(null,"Check-in date should before check-out date");
                 return;
             }
+
         }catch (Exception e){
 
         }
@@ -181,9 +285,6 @@ public class ref extends JFrame{
             room2Num = (int)room2.getValue();
             room3Num = (int)room3.getValue();
             room4Num = (int)room4.getValue();
-
-
-
 
         }catch (Exception e){
             pNum=0;
@@ -224,9 +325,10 @@ public class ref extends JFrame{
         long from1 = checkout.getTime();
         long to1 = checkin.getTime();
         int days = (int) ((from1-to1) / (1000 * 60 * 60 * 24));
-
         String msg =
                 "Order Preview"+newline
+                        +"Hotel: "+ currentHotel+newline
+                        +"Address: "+ currentAddr+newline
                 +"Full Name: "+firstName+" "+lastName+newline
                 +"Phone: "+phone+newline
                 +"Customer Number: "+ pNum+newline
@@ -246,6 +348,7 @@ public class ref extends JFrame{
         if (room4Num>0){
             orderPreviewer.append("Family Four Bed Room: "+ room1Num+newline);
         }
+
     }
 
     private void createUIComponents() {
