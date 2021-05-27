@@ -18,7 +18,7 @@ public class ref extends JFrame{
     private JTextField phonetext;
     private JButton button1;
     private JLabel img1;
-    private JTextArea textArea1;
+    private JTextArea orderPreviewer;
     private JButton confirmButton;
     private JButton resetButton;
     private JPanel test;
@@ -42,6 +42,9 @@ public class ref extends JFrame{
     private JSpinner spinner4;
     private JSpinner spinner5;
     private JSpinner personNumber;
+    private JPanel inp;
+    private JPanel test2;
+    private JButton reviewButton;
 
     private String firstName;
     private String lastName;
@@ -77,18 +80,17 @@ public class ref extends JFrame{
         super(title);
         JPanel mainPanel = BookingPanel;
         this.setContentPane(mainPanel);
-//        textArea2.append("testtest"+newline+"dsfavvvdsafasfd;slajfsdjaf;lkjs;lfjl;asjffasfaf");
-//        changeText();
+
         setimage(img1,"src/hotelImage/img1.png");
-        setimage(img2,"src/hotelImage/img1.png");
-        setimage(img3,"src/hotelImage/img1.png");
-        setimage(img4,"src/hotelImage/img1.png");
-        setimage(img5,"src/hotelImage/img1.png");
-        setimage(img6,"src/hotelImage/img1.png");
-        setimage(img7,"src/hotelImage/img1.png");
-        setimage(img8,"src/hotelImage/img1.png");
-        setimage(img9,"src/hotelImage/img1.png");
-        setimage(img10,"src/hotelImage/img1.png");
+        setimage(img2,"src/hotelImage/img2.png");
+        setimage(img3,"src/hotelImage/img3.png");
+        setimage(img4,"src/hotelImage/img4.png");
+        setimage(img5,"src/hotelImage/img5.png");
+        setimage(img6,"src/hotelImage/img6.png");
+        setimage(img7,"src/hotelImage/img7.png");
+        setimage(img8,"src/hotelImage/img8.png");
+        setimage(img9,"src/hotelImage/img9.png");
+        setimage(img10,"src/hotelImage/img10.png");
         setmap();
 
         setDataChooser(checkInDate, checkInPanel);
@@ -101,16 +103,47 @@ public class ref extends JFrame{
         confirmButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                inputChecker();
                 JOptionPane.showMessageDialog(null,"Submit successfully");
             }
         });
+        resetButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                firstNametext.setText("");
+                lastnametext.setText("");
+                phonetext.setText("");
+                personNumber.setValue(0);
+                orderPreviewer.setText("");
+            }
+        });
+        reviewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                inputChecker();
+                orderPreview();
+            }
+        });
     }
+    public void inputChecker(){
+        loadData();
+        if (phone==0||firstName==null||lastName==null||pNum<=0){
+            JOptionPane.showMessageDialog(null,"Invalid Input!");
+            return;
+        }
+    }
+
+
     public void loadData(){
-        phone =Integer.parseInt(phonetext.getText());
-        firstName = firstNametext.getText();
-        lastName = lastnametext.getText();
-        pNum = (int)personNumber.getValue();
+        try {
+            phone =Integer.parseInt(phonetext.getText());
+            firstName = firstNametext.getText();
+            lastName = lastnametext.getText();
+            pNum = (int)personNumber.getValue();
+        }catch (Exception e){
+            pNum=0;
+        }
+
     }
 
 
@@ -141,23 +174,16 @@ public class ref extends JFrame{
 
     }
 
-    public void changeText(){
-        //room type title
-        JLabel roomType=new JLabel("Room Type");
-        reservation.add(roomType);
-
-        //single rooms
-        JLabel singleRooms=new JLabel("Single room");
-        reservation.add(singleRooms);
-
-        //double room one double bed
-        JLabel doubleRooms1=new JLabel("Double room");
-        reservation.add(doubleRooms1);
-
-        //single room two single beds
-        JLabel doubleRooms2=new JLabel("Double room");
-        doubleRooms2.setBounds(5, 50, 100, 100);
-        reservation.add(doubleRooms2);
+    public void orderPreview(){
+        orderPreviewer.setText("");
+        String msg =
+                "Order Preview"+newline
+                +"Full Name: "+firstName+" "+lastName+newline
+                +"Phone: "+phone+newline
+                +"Customer Number: "+ pNum+newline
+                +"Check-in Date"+checkInDate.getText()+newline
+                +"Check-out Date"+checkOutDate.getText();
+        orderPreviewer.append(msg);
     }
 
     private void createUIComponents() {
