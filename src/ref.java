@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class ref extends JFrame{
     private JPanel BookingPanel;
@@ -7,8 +8,6 @@ public class ref extends JFrame{
     private JLabel selectHotelName;
     private JLabel hotelLabel;
     private JScrollPane reservation;
-    private JTextArea textArea2;
-    private JScrollPane customerChecker;
     private JLabel mapLabel;
     private JPanel titlePanel;
     private JPanel row1;
@@ -20,34 +19,89 @@ public class ref extends JFrame{
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JComboBox comboBox3;
-    private JScrollPane Hotels;
-    private JPanel HotelList;
+    private JComboBox peopleBox1;
     private JButton button1;
-    private JTextField textField4;
+    private JLabel img1;
+    private JTextArea textArea1;
+    private JButton confirmButton;
+    private JButton resetButton;
+    private JPanel test;
+    private JTextField checkInDate;
+    private JTextField checkOutDate;
+    private JPanel checkInPanel;
+    private JPanel checkOutPanel;
 
     private final static String newline = "\n";
 
+    public static void main(String[] args) {
+        JFrame f = new ref("Focus Hotel Booking");
+    }
+//    public static void main(String args[]) {
+//        DateChooser dateChooser1 = DateChooser.getInstance("yyyy-MM-dd");
+//        DateChooser dateChooser2 = DateChooser.getInstance("yyyy-MM-dd");
+//        JTextField showDate1 = new JTextField("Click and choose a date");
+//        JTextField showDate2 = new JTextField("Click and choose a date");
+////  JLabel showDate2 = new JLabel("单击选择日期");
+//
+//        dateChooser1.register(showDate1);
+//        dateChooser2.register(showDate2);
+//        showDate1.setBounds(500, 210, 20, 20);
+//        showDate2.setBounds(500, 240, 20, 20);
+//        JFrame frame=new JFrame("New Frame");
+//        frame.add(showDate2);
+//        frame.add(showDate1);
+//
+//        frame.setBounds(100, 100, 500, 500);
+//        frame.setVisible(true);
+//    }
 
     public ref(String title){
         super(title);
-
         JPanel mainPanel = BookingPanel;
         this.setContentPane(mainPanel);
-        textArea2.append("testtest"+newline+"dsfavvvdsafasfd;slajfsdjaf;lkjs;lfjl;asjffasfaf");
+//        textArea2.append("testtest"+newline+"dsfavvvdsafasfd;slajfsdjaf;lkjs;lfjl;asjffasfaf");
 //        changeText();
+        setimage();
+        setmap();
+        setPeopleBox1();
+
+        setDataChooser(checkInDate, checkInPanel);
+        setDataChooser(checkOutDate, checkOutPanel);
+
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1300,1000);
 //        this.pack();
     }
 
-    public static void main(String[] args) {
-        JFrame f = new ref("Focus Hotel Booking");
+
+
+    public void setPeopleBox1(){
+        for (int i = 1; i < 10; i++) {
+            peopleBox1.addItem(i);
+        }
+
     }
 
+    public void setmap(){
+        ImageIcon locationMap=new ImageIcon("src/map.png");
+        locationMap.setImage(locationMap.getImage().getScaledInstance(500, 900, Image.SCALE_DEFAULT));
+        mapLabel.setIcon(locationMap);
+    }
+
+    public void setimage(){
+        ImageIcon locationMap=new ImageIcon("src/hotelImage/img1.png");
+        locationMap.setImage(locationMap.getImage().getScaledInstance(150, 100, Image.SCALE_DEFAULT));
+        img1.setIcon(locationMap);
+    }
+    public void setDataChooser(JTextField textField1, JPanel panel){
+        DateChooser dateChooser1 = DateChooser.getInstance("yyyy-MM-dd");
+        dateChooser1.register(textField1);
+        textField1.setText("Click to select date");
+        textField1.setSize(new Dimension(200,10));
+        panel.add(dateChooser1);
+
+    }
 
     public void changeText(){
         //room type title
@@ -68,4 +122,7 @@ public class ref extends JFrame{
         reservation.add(doubleRooms2);
     }
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
