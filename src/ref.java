@@ -3,17 +3,13 @@ import javax.swing.*;
 public class ref extends JFrame{
     private JPanel BookingPanel;
     private JPanel map;
-    private JPanel HotelList;
     private JPanel infoPanel;
-    private JScrollPane Hotels;
     private JLabel selectHotelName;
     private JLabel hotelLabel;
     private JScrollPane reservation;
     private JTextArea textArea2;
     private JScrollPane customerChecker;
     private JLabel mapLabel;
-    private JButton button1;
-    private JTextArea textArea1;
     private JPanel titlePanel;
     private JPanel row1;
     private JPanel row2;
@@ -24,6 +20,13 @@ public class ref extends JFrame{
     private JTextField textField1;
     private JTextField textField2;
     private JTextField textField3;
+    private JComboBox comboBox1;
+    private JComboBox comboBox2;
+    private JComboBox comboBox3;
+    private JScrollPane Hotels;
+    private JPanel HotelList;
+    private JButton button1;
+    private JTextField textField4;
 
     private final static String newline = "\n";
 
