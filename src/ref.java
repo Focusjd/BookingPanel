@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ref extends JFrame{
     private JPanel BookingPanel;
@@ -10,16 +12,10 @@ public class ref extends JFrame{
     private JScrollPane reservation;
     private JLabel mapLabel;
     private JPanel titlePanel;
-    private JPanel row1;
-    private JPanel row2;
-    private JPanel row3;
-    private JPanel row4;
-    private JPanel row5;
     private JLabel selectTitle;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JComboBox peopleBox1;
+    private JTextField firstNametext;
+    private JTextField lastnametext;
+    private JTextField phonetext;
     private JButton button1;
     private JLabel img1;
     private JTextArea textArea1;
@@ -40,6 +36,18 @@ public class ref extends JFrame{
     private JLabel img8;
     private JLabel img9;
     private JLabel img10;
+    private JSpinner spinner1;
+    private JSpinner spinner2;
+    private JSpinner spinner3;
+    private JSpinner spinner4;
+    private JSpinner spinner5;
+    private JSpinner personNumber;
+
+    private String firstName;
+    private String lastName;
+    private int phone;
+    private int pNum;
+
 
     private final static String newline = "\n";
 
@@ -82,7 +90,6 @@ public class ref extends JFrame{
         setimage(img9,"src/hotelImage/img1.png");
         setimage(img10,"src/hotelImage/img1.png");
         setmap();
-        setPeopleBox1();
 
         setDataChooser(checkInDate, checkInPanel);
         setDataChooser(checkOutDate, checkOutPanel);
@@ -91,16 +98,28 @@ public class ref extends JFrame{
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1300,1000);
 //        this.pack();
+        confirmButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                JOptionPane.showMessageDialog(null,"Submit successfully");
+            }
+        });
+    }
+    public void loadData(){
+        phone =Integer.parseInt(phonetext.getText());
+        firstName = firstNametext.getText();
+        lastName = lastnametext.getText();
+        pNum = (int)personNumber.getValue();
     }
 
 
-
-    public void setPeopleBox1(){
-        for (int i = 1; i < 10; i++) {
-            peopleBox1.addItem(i);
-        }
-
-    }
+//    public void setPeopleBox1(){
+//        for (int i = 1; i < 10; i++) {
+//            peopleBox1.addItem(i);
+//        }
+//
+//    }
 
     public void setmap(){
         ImageIcon locationMap=new ImageIcon("src/map.png");
