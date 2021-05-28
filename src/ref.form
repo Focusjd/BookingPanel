@@ -315,7 +315,7 @@
               <grid row="9" column="0" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Fira Code" size="20" style="1"/>
+              <font name="Fira Code" size="28" style="1"/>
               <text value="Room Detail"/>
             </properties>
           </component>
@@ -340,6 +340,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <font size="16"/>
                       <text value="First Name:"/>
                     </properties>
                   </component>
@@ -358,6 +359,7 @@
                       <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <font size="16"/>
                       <text value="Last Name"/>
                     </properties>
                   </component>
@@ -384,6 +386,7 @@
                       <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
+                      <font size="16"/>
                       <text value="Phone"/>
                     </properties>
                   </component>
@@ -422,6 +425,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font size="16"/>
                   <text value="Customer Number"/>
                 </properties>
               </component>
@@ -580,7 +584,7 @@
               <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Fira Code" size="20" style="1"/>
+              <font name="Fira Code" size="28" style="1"/>
               <text value="Review Your Order"/>
             </properties>
           </component>
@@ -589,7 +593,7 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <font name="Fira Code" size="20" style="1"/>
+              <font name="Fira Code" size="28" style="1"/>
               <text value="Your Infomation"/>
             </properties>
           </component>
@@ -611,6 +615,7 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font style="1"/>
                   <text value="Room Type"/>
                 </properties>
               </component>
@@ -619,6 +624,7 @@
                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font style="1"/>
                   <text value="Bed"/>
                 </properties>
               </component>
@@ -627,6 +633,7 @@
                   <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font style="1"/>
                   <text value="Floor"/>
                 </properties>
               </component>
@@ -635,6 +642,7 @@
                   <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font style="1"/>
                   <text value="Window"/>
                 </properties>
               </component>
@@ -643,6 +651,7 @@
                   <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
+                  <font style="1"/>
                   <text value="Price"/>
                 </properties>
               </component>
@@ -724,6 +733,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Soccer Rd No.111"/>
                                 </properties>
                               </component>
@@ -750,6 +760,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="4.7 "/>
                                 </properties>
                               </component>
@@ -810,6 +821,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Laight St No.6"/>
                                 </properties>
                               </component>
@@ -836,6 +848,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="3.9"/>
                                 </properties>
                               </component>
@@ -887,6 +900,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Fira Code Retina" size="18"/>
                                   <text value="Goat Hotel"/>
                                 </properties>
                               </component>
@@ -895,6 +909,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Goat St No.1"/>
                                 </properties>
                               </component>
@@ -921,6 +936,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="4.9"/>
                                 </properties>
                               </component>
@@ -972,6 +988,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="PCMyungjo" size="18"/>
                                   <text value="ROMA Hotel"/>
                                 </properties>
                               </component>
@@ -980,6 +997,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Sleep St No.7"/>
                                 </properties>
                               </component>
@@ -1006,6 +1024,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="4.5"/>
                                 </properties>
                               </component>
@@ -1057,6 +1076,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="AppleGothic" size="18"/>
                                   <text value="Beans Hotel"/>
                                 </properties>
                               </component>
@@ -1065,6 +1085,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Net Rd No.12"/>
                                 </properties>
                               </component>
@@ -1091,6 +1112,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="3.8"/>
                                 </properties>
                               </component>
@@ -1142,6 +1164,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Chalkduster" size="18"/>
                                   <text value="Big Hotel"/>
                                 </properties>
                               </component>
@@ -1150,6 +1173,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Huge St No.55"/>
                                 </properties>
                               </component>
@@ -1176,6 +1200,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="4.9"/>
                                 </properties>
                               </component>
@@ -1227,6 +1252,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Euphemia UCAS" size="18"/>
                                   <text value="Small Hotel"/>
                                 </properties>
                               </component>
@@ -1235,6 +1261,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Small Rd No.31"/>
                                 </properties>
                               </component>
@@ -1261,6 +1288,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="4.8"/>
                                 </properties>
                               </component>
@@ -1312,6 +1340,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Bradley Hand" size="18"/>
                                   <text value="Cheng Hotel"/>
                                 </properties>
                               </component>
@@ -1320,6 +1349,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Small Rd No.24"/>
                                 </properties>
                               </component>
@@ -1346,6 +1376,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="3.9"/>
                                 </properties>
                               </component>
@@ -1397,6 +1428,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="PilGi" size="18"/>
                                   <text value="Focus Hotel"/>
                                 </properties>
                               </component>
@@ -1405,6 +1437,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="Charlie St No.1"/>
                                 </properties>
                               </component>
@@ -1431,6 +1464,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="4.9"/>
                                 </properties>
                               </component>
@@ -1482,6 +1516,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Zapfino" size="18" style="1"/>
                                   <text value="Last Hotel"/>
                                 </properties>
                               </component>
@@ -1490,6 +1525,7 @@
                                   <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <font name="Courier" size="12" style="2"/>
                                   <text value="First Rd No.212"/>
                                 </properties>
                               </component>
@@ -1516,6 +1552,7 @@
                                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                                 </constraints>
                                 <properties>
+                                  <foreground color="-4513256"/>
                                   <text value="2.7"/>
                                 </properties>
                               </component>

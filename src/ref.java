@@ -61,7 +61,7 @@ public class ref extends JFrame{
 
     private String firstName;
     private String lastName;
-    private int phone;
+    private String phone;
     private int pNum;
     private Date checkin;
     private Date checkout;
@@ -235,6 +235,8 @@ public class ref extends JFrame{
         });
     }
     public void reset(){
+        hotelLabel.setText("");
+        hotelLocation.setText("");
         firstNametext.setText("");
         lastnametext.setText("");
         phonetext.setText("");
@@ -265,8 +267,12 @@ public class ref extends JFrame{
 
         }
 
-        if (phone==0||firstName==null||lastName==null||pNum<=0){
+        if (phone==null||firstName==null||lastName==null||pNum<=0){
             JOptionPane.showMessageDialog(null,"Invalid Input!");
+            return;
+        }
+        if (phone.length()!=8&&phone.length()!=11){
+            JOptionPane.showMessageDialog(null,"phone number in valid");
             return;
         }
     }
@@ -274,7 +280,7 @@ public class ref extends JFrame{
 
     public void loadData(){
         try {
-            phone =Integer.parseInt(phonetext.getText());
+            phone =phonetext.getText();
             firstName = firstNametext.getText();
             lastName = lastnametext.getText();
             pNum = (int)personNumber.getValue();
@@ -317,7 +323,6 @@ public class ref extends JFrame{
         textField1.setText("Click to select date");
         textField1.setSize(new Dimension(200,10));
         panel.add(dateChooser1);
-
     }
 
     public void orderPreview(){
@@ -348,6 +353,8 @@ public class ref extends JFrame{
         if (room4Num>0){
             orderPreviewer.append("Family Four Bed Room: "+ room1Num+newline);
         }
+        int totalPrice = room1Num*31+room2Num*39+room3Num*50+room4Num*75;
+        orderPreviewer.append("Total price: "+totalPrice+newline);
 
     }
 
